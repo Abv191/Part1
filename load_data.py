@@ -1,7 +1,6 @@
 import json
 from models import Author, Quote
 
-# Завантаження даних авторів
 with open('authors.json', 'r') as f:
     authors_data = json.load(f)
     for author_data in authors_data:
@@ -13,7 +12,6 @@ with open('authors.json', 'r') as f:
         )
         author.save()
 
-# Завантаження даних цитат
 with open('qoutes.json', 'r') as f:
     quotes_data = json.load(f)
     for quote_data in quotes_data:
